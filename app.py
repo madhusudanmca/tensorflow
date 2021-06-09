@@ -19,7 +19,8 @@ def predict():
     rdSpend = float(request.form['rdSpend'])
     admSpend = float(request.form['admSpend'])
 
-    finalFeatures = np.concatenate((np.array([[rdSpend,admSpend]])) , axis = 1)
+    finalFeatures = np.array([[rdSpend,admSpend]])
+    stdFeatures = scFeatures.transform(finalFeatures)
     prediction = model.predict(finalFeatures)
 
     
