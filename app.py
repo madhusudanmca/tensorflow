@@ -3,8 +3,8 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('SalaryPredictor')
-scFeatures = pickle.load(open('FeatureTransformer.ft','rb'))
+model = tf.keras.models.load_model('Social_Network_Ads')
+scFeatures = pickle.load(open('scFeatures.ft','rb'))
 
 @app.route('/')
 def home():
