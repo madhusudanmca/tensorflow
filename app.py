@@ -21,7 +21,7 @@ def predict():
 
     finalFeatures = np.array([[rdSpend,admSpend]])
     stdFeatures = scFeatures.transform(finalFeatures)
-    prediction = model.predict(finalFeatures)
+    prediction = model.predict(stdFeatures)
 
     
 
